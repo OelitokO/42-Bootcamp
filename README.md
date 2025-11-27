@@ -1,24 +1,41 @@
-<h1 align="center">Yardımcı Linkler</h1>
-<h3 margin="left">https://pythontutor.com // Algoritma akışı için</h3>
-<h3 margin="left">https://github.com/ChuOkupai/vimcake)https://github.com/ChuOkupai/vimcake // zsh terminali için plugin</h3>
-<h3 margin="left">https://www.w3schools.com/c/index.php // C dili için yabancı kaynak</h3>
+# 🚀 42 Header Kurulumu ve Faydalı Kaynaklar
 
+Bu doküman, 42 Okulu projelerinde gerekli olan **Standart Header**'ın (başlık bloğu) **zsh** terminalinde kurulumunu ve öğrenme sürecine destek olacak bazı faydalı kaynakları içermektedir.
 
-<h5 margin="left">Vakit kaybetmemeniz için adım adım Header kurulumu:
+---
 
+## 🛠️ Standart Header Kurulumu (Zsh İçin)
 
-1- Terminalinizi açın ve "zsh" yazıp enterlayın.
+Bu adımlar, **42 Header**'ı `Vim` editöründe otomatik olarak kullanabilmek için gerekli ayarları yapmanızı sağlar. Bu kurulum sadece `zsh` kabuğunda geçerlidir.
 
-2- 42header git reposunu masaüstüne clonelayın. (git clone https://github.com/42Paris/42header ~/Desktop/42header)
+### Ön Koşul
 
-3- Masaüstünde bulunan 42header klasörüne gelin ("cd ~/Desktop/42header/")
+* Terminalde varsayılan kabuk olarak **Zsh** kullanmalısınız. (Kurulum adımlarında bu geçici olarak ayarlanacaktır.)
 
-4- "touch ~/.zshrc" komutunu girin.
+### Adım Adım Kurulum
 
-5- "./set_header.sh" komutunu girin.
+| S.N. | Komut | Açıklama |
+| :--- | :--- | :--- |
+| **1.** | `zsh` | Terminalinizi açın ve **zsh** kabuğunu başlatın. |
+| **2.** | `git clone https://github.com/42Paris/42header ~/Desktop/42header` | 42 Header Git deposunu Masaüstü'nüzdeki `42header` klasörüne klonlayın. |
+| **3.** | `cd ~/Desktop/42header/` | Oluşturulan `42header` klasörüne geçiş yapın. |
+| **4.** | `touch ~/.zshrc` | Eğer mevcut değilse, `.zshrc` dosyasını oluşturun. |
+| **5.** | `./set_header.sh` | Kurulum betiğini çalıştırarak gerekli `Vim` eklentilerini ve ayarlarını otomatik olarak yapın. |
+| **6.** | `cd ~/.vim/plugin` | `Vim` eklentilerinin bulunduğu klasöre gidin. |
 
-6- "cd ~/.vim/plugin" ile plugin klasörüne gidin. Vim ile stdheader.vim'e girin ve let l:user = "marvin" kısmını kendi usernameiniz ile, let l:mail = "marvin@42.fr" kısmını kendi mailiniz ile değiştirin. Ardından kaydedip çıkın.
+### Header Bilgilerini Kişiselleştirme
 
-7- Deneme amaçlı Vim ile rastgele bir dosya açın ve ESC'den sonra ":Stdheader" yazıp Enter'layın. Kısayol olarak klavyenizden "fn+F1" tuşlarına bastığınızda Header'ınız en üstte gözükecektir. 
+6. adımdan sonra, header'da görünecek kullanıcı adı ve mail adresinizi ayarlamanız gerekir.
 
-Not: Headerınız bash terminalde yani direkt tıklayıp açtığınız default terminalde çalışmayacaktır. Bunun için her terminal açtığınızda "zsh" komutunu girip Enterlarsanız sorun hallolur. Aksi halde hata alacaksınız. Kısacası kurduğumuz Header zsh shell'inde çalışmaktadır.</h5>
+1.  `Vim` ile `stdheader.vim` dosyasını açın:
+    ```bash
+    vim stdheader.vim
+    ```
+2.  Aşağıdaki satırları **kendi kullanıcı adı** ve **mail adresiniz** ile değiştirin:
+    * `let l:user = "marvin"`
+    * `let l:mail = "marvin@42.fr"`
+3.  Dosyayı kaydedip (`:w`) ve çıkın (`:q`).
+
+### Kullanım ve Doğrulama
+
+1.  Deneme amaçlı `Vim` ile rastgele bir dosya açın.
